@@ -9,10 +9,5 @@ exports.validateUserRegistration = [
   body("contact_number")
     .notEmpty()
     .withMessage(validationMessage.general.contactNumberRequired),
-  body("first_name")
-    .notEmpty()
-    .withMessage(validationMessage.general.firstRequired),
-  body("last_name")
-    .notEmpty()
-    .withMessage(validationMessage.general.lastRequired),
+  body("name").notEmpty().withMessage(validationMessage.general.nameRequired),
 ];
