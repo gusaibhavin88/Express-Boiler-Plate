@@ -21,7 +21,6 @@ app.use(
 );
 const morgan = require("morgan");
 const path = require("path");
-app.use(express.json());
 app.use(morgan("dev"));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 

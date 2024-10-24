@@ -6,15 +6,12 @@ const { validateUserRegistration } = require("../validators/auth.validator");
 const { upload } = require("../helpers/multer");
 
 authRoute.post(
-  "/signup",
-  upload.single("profile_image"),
-  validateUserRegistration,
-  validatorFunc,
-  authController.signup
+  "/signup"
+  // upload.single("profile_image"),
+  // validateUserRegistration,
+  // validatorFunc,
+  // authController.signup
 );
-authRoute.post("/login", authController.login);
-authRoute.post("/forgot-password", authController.forgotPassword);
-authRoute.post("/reset-password", authController.resetPassword);
 // authRoute.use(protect);
 
 module.exports = authRoute;
